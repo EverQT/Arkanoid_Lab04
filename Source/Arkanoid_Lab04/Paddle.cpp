@@ -18,8 +18,11 @@ APaddle::APaddle()
 	SM_Paddle->SetConstraintMode(EDOFMode::XZPlane);//PAra que trabeje en el plano XZ
 	SM_Paddle->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);//Va a controlar la collisones fisicas y de lugar(programable)
 	SM_Paddle->SetCollisionProfileName(TEXT("PhisycActor"));//Nombre para esa collision
+	
+	//
+	FloatingMovement = CreateDefaultSubobject<UFloatingPawnMovement>(TEXT("Flaoting pawn movement"));
 
-	FloatingMovement = CreateDefaultSubobject<UFloatingPawnMovement>(TEXT("Flaoting pow movement"));
+
 
 }
 
@@ -29,6 +32,7 @@ void APaddle::BeginPlay()
 	Super::BeginPlay();
 	
 }
+
 
 // Called every frame
 void APaddle::Tick(float DeltaTime)

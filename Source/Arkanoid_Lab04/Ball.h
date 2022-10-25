@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Pila.h"
 #include "Ball.generated.h"
 
 
@@ -20,7 +21,17 @@ public:
 	
 	virtual void Launch();
 	bool BallLaunched;
+
+
+	Pila<int> PilaEnteros;
+	Pila<float> PilaFlotantes;
+
+	//Pila<class Ball*> PilaBalls;
+	//PilaBalls.Insertar(Brick1);
 	
+
+	
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

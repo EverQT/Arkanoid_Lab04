@@ -27,6 +27,24 @@ ABall::ABall()
 	ProjectileMovement->Velocity.X = 0.0f;
 
 
+	PilaEnteros.Insertar(10);
+	PilaFlotantes.Insertar(3.5);
+
+	PilaEnteros.Sacar();
+	PilaFlotantes.Sacar();
+
+	//const FVector MoveDirection = FVector();
+	//const FRotator BallRotation = MoveDirection.Rotation();
+	////Spawn ball
+	//const FVector SpawnLocation = GetActorLocation() + BallRotation.RotateVector(GunOffset);
+
+	//UWorld* const World = GetWorld();
+	//if (World != nullptr)
+	//{
+	//	// spawn the ball
+	//	PilaBalls.Push(World->SpawnActor<ABall>(SpawnLocation, BallRotation));
+	//}
+
 }
 
 // Called when the game starts or when spawned
